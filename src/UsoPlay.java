@@ -24,7 +24,7 @@ public class UsoPlay {
 
 	// Refresh field's card if no one can discard.
 	public static void refresh(Field field, Deck deck) {
-		field = new Field(deck.dealCard());
+		field.dealCard(deck);
 		System.out.println("********************");
 		System.out.println("No player can discard, refresh field.");
 		System.out.println("********************");
@@ -119,7 +119,7 @@ public class UsoPlay {
 			if (computerHands1.showNumOfCards() == 1) {
 				// If Computer1 has only one card, call USO.
 				System.out.println("<><><><><><><><><><><><>");
-				System.out.println("Computer 1 calls UNO!");
+				System.out.println("Computer 1 calls USO!");
 				System.out.println("<><><><><><><><><><><><>");
 			} else if (computerHands1.showNumOfCards() == 0) {
 				// If Computer2 has no card, finish this game.
