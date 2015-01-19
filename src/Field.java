@@ -16,7 +16,7 @@ public class Field {
 		System.out.println("--------------------");
 	}
 
-	public Boolean judgeNextComputerCard(UnoHand unohand) {
+	public Boolean judgeNextComputerCard(UsoHand unohand) {
 		for (int i = 0; i < unohand.showNumOfCards(); i++) {
 			if ((unohand.showCard(i).getColor() == this.nextColor)
 					|| (unohand.showCard(i).getValue() == this.nextValue)) {
@@ -28,7 +28,7 @@ public class Field {
 		return false;
 	}
 
-	public Boolean judgeNextPlayerCard(UnoHand unohand, int i) {
+	public Boolean judgeNextPlayerCard(UsoHand unohand, int i) {
 		if ((unohand.showCard(i).getColor() == this.nextColor)
 				|| (unohand.showCard(i).getValue() == this.nextValue)) {
 			return true;
